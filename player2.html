@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rock Paper Scissors</title>
+
+    <link rel="icon" href="./Assets/Images/icon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Assets/CSS/reset.css" />
+    <link rel="stylesheet" href="./Assets/CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Barrio|Frijole"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="display-4">
+        <span class="red">Rock </span><span class="blue">Paper </span
+        ><span class="yellow">Scissors</span>
+      </h1>
+      <img src="./Assets/Images/rps.png" alt="Rock Paper Scissors" id="rps" />
+    </header>
+    <main>
+      <h2 class="blue">Player 2</h2>
+      <p>Pick your weapon</p>
+      <img
+        src="./Assets/Images/rock.png"
+        alt="Rock"
+        class="images"
+        value="rock"
+      />
+      <img
+        src="./Assets/Images/paper.png"
+        alt="Paper"
+        class="images"
+        value="paper"
+      />
+      <img
+        src="./Assets/Images/scissors.png"
+        alt="Scissors"
+        class="images"
+        value="scissors"
+      />
+      <div><button id="submit" class="btn btn-warning">Shoot</button></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p>Wins: <span id="wins"></span></p>
+          </div>
+          <div class="col-lg-6">
+            <p>Loses: <span id="loses"></span></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p id="copyright" class="blue">copyright &copy; 2019</p>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script src="./Assets/JavaScript/java.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyD9s4LrQDiSafWAoS_a08bQNb5SiTud2JU",
+        authDomain: "rps-multiplayer-aa889.firebaseapp.com",
+        databaseURL: "https://rps-multiplayer-aa889.firebaseio.com",
+        projectId: "rps-multiplayer-aa889",
+        storageBucket: "rps-multiplayer-aa889.appspot.com",
+        messagingSenderId: "20555152985"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </body>
+</html>
