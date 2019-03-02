@@ -29,26 +29,101 @@
       <img src="./Assets/Images/rps.png" alt="Rock Paper Scissors" id="rps" />
     </header>
     <main>
-      <div class="container">
+      <div class="container main-page">
         <div class="row">
           <div class="col-lg-6">
             <h2>Player 1</h2>
-            <a href="./player1.html">
-              <img
-                src="./Assets/Images/player 1.png"
-                alt="Player 1"
-                class="player"
-              />
-            </a>
+
+            <img
+              src="./Assets/Images/player 1.png"
+              alt="Player 1"
+              class="player"
+              id="selectPlayer1"
+            />
           </div>
           <div class="col-lg-6">
             <h2>Player 2</h2>
-            <a href="./player2.html">
-              <img
-                src="./Assets/Images/player 2.png"
-                alt="Player 2"
-                class="player"
-            /></a>
+
+            <img
+              src="./Assets/Images/player 2.png"
+              alt="Player 2"
+              class="player"
+              id="selectPlayer2"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="player1" class="hidden">
+        <h2 class="red">Player 1</h2>
+        <p>Pick your weapon</p>
+        <img
+          src="./Assets/Images/rock.png"
+          alt="Rock"
+          class="images"
+          value="rock"
+        />
+        <img
+          src="./Assets/Images/paper.png"
+          alt="Paper"
+          class="images"
+          value="paper"
+        />
+        <img
+          src="./Assets/Images/scissors.png"
+          alt="Scissors"
+          class="images"
+          value="scissors"
+        />
+        <p class="hidden" id="displayChoice1">
+          You've selected <span id="weapon1"></span>
+        </p>
+        <div><button id="submit" class="btn btn-warning">Shoot</button></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <p>Wins: <span id="wins1"></span></p>
+            </div>
+            <div class="col-lg-6">
+              <p>Loses: <span id="loses1"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="player2" class="hidden">
+        <h2 class="blue">Player 2</h2>
+        <p>Pick your weapon</p>
+        <img
+          src="./Assets/Images/rock.png"
+          alt="Rock"
+          class="images"
+          value="rock"
+        />
+        <img
+          src="./Assets/Images/paper.png"
+          alt="Paper"
+          class="images"
+          value="paper"
+        />
+        <img
+          src="./Assets/Images/scissors.png"
+          alt="Scissors"
+          class="images"
+          value="scissors"
+        />
+        <p class="hidden" id="displayChoice2">
+          You've selected <span id="weapon2"></span>
+        </p>
+        <div><button id="submit" class="btn btn-warning">Shoot</button></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <p>Wins: <span id="wins2"></span></p>
+            </div>
+            <div class="col-lg-6">
+              <p>Loses: <span id="loses2"></span></p>
+            </div>
           </div>
         </div>
       </div>
@@ -62,7 +137,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     ></script>
-    <script src="./Assets/JavaScript/java.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script>
       var config = {
@@ -75,5 +150,6 @@
       };
       firebase.initializeApp(config);
     </script>
+    <script src="./Assets/JavaScript/java.js"></script>
   </body>
 </html>

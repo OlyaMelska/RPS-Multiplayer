@@ -49,14 +49,18 @@
         class="images"
         value="scissors"
       />
+      <p class="hidden" id="displayChoice">
+        You've selected <span id="weapon"></span>
+      </p>
       <div><button id="submit" class="btn btn-warning">Shoot</button></div>
+
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <p>Wins: <span id="wins"></span></p>
+            <p>Wins: <span id="wins1"></span></p>
           </div>
           <div class="col-lg-6">
-            <p>Loses: <span id="loses"></span></p>
+            <p>Loses: <span id="loses1"></span></p>
           </div>
         </div>
       </div>
@@ -70,7 +74,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     ></script>
-    <script src="./Assets/JavaScript/java.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script>
       var config = {
@@ -83,5 +87,6 @@
       };
       firebase.initializeApp(config);
     </script>
+    <script src="./Assets/JavaScript/java.js"></script>
   </body>
 </html>
